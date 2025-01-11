@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Salão de Manicure e Pedicure">
+    <meta name="author" content="Seu Nome">
+    <title>Salão de Manicure - Beleza nas Mãos</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Ícones do Ionicons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.10-0/css/ionicons.min.css" rel="stylesheet">
+
+    <style>
+        /* Reset de estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #FF6EB1;
+        }
+
+        .navbar-brand img {
+            max-width: 150px;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-size: 18px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #FF1D5C !important;
+        }
+
+        /* Seções */
+        #home {
+            background: url('https://unhadecoradasimples.com.br/wp-content/uploads/2024/09/unhas-francesinhas-2024-novas-ideias-1024x579.png') no-repeat center center fixed;
+            background-size: cover;
+            color: rgb(0, 0, 0);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #home h1 {
+            font-size: 48px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        #home .btn {
+            background-color: #FF6EB1;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 30px;
+            text-transform: uppercase;
+        }
+
+        #home .btn:hover {
+            background-color: #FF1D5C;
+        }
+
+        /* Serviços */
+        #services {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        #services h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .service-box {
+            text-align: center;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            background-color: #f9f9f9;
+        }
+
+        .service-box i {
+            font-size: 40px;
+            color: #FF6EB1;
+            margin-bottom: 20px;
+        }
+
+        .service-box h4 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            font-size: 16px;
+            color: #777;
+        }
+
+        /* Portfólio */
+        #portfolio {
+            padding: 60px 0;
+            background-color: #f4f4f4;
+        }
+
+        #portfolio .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #portfolio .gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+
+        /* Equipe */
+        #team {
+            padding: 60px 0;
+        }
+
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .team-member h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .team-member p {
+            font-size: 16px;
+            color: #000000;
+        }
+
+        /* Contato */
+        #contact {
+            background-color: #FF6EB1;
+            color: rgb(255, 255, 255);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        /* Estilo para o Portfólio */
+#portfolio {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+}
+
+#portfolio h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Galeria de imagens */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Espaço entre as imagens */
+    justify-content: center;
+}
+
+.gallery img {
+    width: 100%;     /* A imagem ocupa toda a largura do contêiner da coluna */
+    height: 250px;   /* Altura fixa para todas as imagens */
+    object-fit: cover;  /* As imagens preenchem o espaço sem distorcer */
+    border-radius: 10px; /* Bordas arredondadas */
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 767px) {
+    .gallery img {
+        height: 200px;  /* Diminui a altura das imagens em telas menores */
+    }
+}
+
+
+        #contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        #contact p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://www.designi.com.br/images/preview/10424780.jpg" alt="Logo Salão de Manicure">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" style="font-size: 20px;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html" style="font-size: 20px;">Galeria</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <div id="home">
+        <div>
+            <h1>Cuide das Suas Mãos</h1>
+            <p>Ofereço serviços de manicure e pedicure com muito carinho, para que você se sinta ainda mais cuidada e bem consigo mesma.</p>
+            <a href="#services" class="btn">Descubra Nossos Serviços</a>
+        </div>
+    </div>
+
+    <!-- Serviços -->
+    <div id="services">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="ion-ios-heart"></i>
+                        <h4>Manicure</h4>
+                        <p>Cuidados completos para suas unhas, com acabamento perfeito.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="ion-ios-color-wand"></i>
+                        <h4>Pedicure</h4>
+                        <p>Tratamento relaxante e estético para seus pés.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="ion-ios-palette"></i>
+                        <h4>Arte nas Unhas</h4>
+                        <p>Decorações criativas para personalizar suas unhas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfólio -->
+<div id="portfolio">
+    <div class="container">
+        <h2>Portfólio de Trabalhos</h2>
+        <div class="row gallery">
+            <div class="col-md-4">
+                <img src="https://i.pinimg.com/736x/9e/4d/be/9e4dbe1347f550e26ef6f411cd890ece.jpg" alt="Unhas Decoradas">
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.pinimg.com/736x/73/66/f0/7366f0ef2af22dbddd7e4b38c9319503.jpg" alt="Arte nas Unhas">
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.pinimg.com/736x/1e/cc/08/1ecc08065ded0f0859107c860ed0caa6.jpg" alt="Manicure Profissional">
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Contato -->
+    <div id="contact">
+        <h2>Fale comigo</h2>
+        <p>Entre em contato comigo para agendar seu horário e obter mais informações sobre o meu serviços.</p>
+        <p><strong>Endereço:</strong> Rua das Flores, 123 - Centro, Cidade, Estado</p>
+        <p><strong>Email:</strong> alinecrociare@gmail.com</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Salão de Manicure - Todos os direitos reservados.
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
