@@ -12,112 +12,175 @@
 
     <!-- Ícones do Ionicons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.10-0/css/ionicons.min.css" rel="stylesheet">
-    
 
     <!-- Estilos customizados para este template -->
     <style>
-      .card-img-top {
-        object-fit: cover;
-        height: 250px; /* Tamanho fixo para as imagens */
+      /* Reset de estilos */
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Arial', sans-serif;
+          color: #333;
+          line-height: 1.6;
+          background-color: #f8f8f8;
+      }
+
+      /* Navbar */
+      .navbar {
+          background-color: #FF6EB1;
       }
 
       .navbar-brand img {
-    max-width: 120px; /* Ajuste a largura máxima conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
-}
-
-
-      .card-body {
-        text-align: center;
+          width: 150px;  /* Largura definida */
+          height: 150px; /* Altura igual para manter a proporção */
+          border-radius: 50%; /* Forma esférica */
       }
 
-      .card-text {
-        font-size: 14px;
-        color: #555;
+      .navbar-nav .nav-link {
+          color: white !important;
+          font-size: 18px;
       }
 
-      :root {
-    --rosa-claro: #FF6EB1;
-    --rosa-escuro: #FF1D5C;
-    --cinza-escuro: #000000;
-    --cinza-claro: #000000;
-    --cinza-medio: #000000;
-    --branco: #ffffff;
-    --cinza-muito-claro: #ffffff;
-    --cinza-ultra-claro: #ffffff;
-}
+      .navbar-nav .nav-link:hover {
+          color: #FF1D5C !important;
+      }
 
-/* Exemplo de uso das variáveis */
-body {
-    background-color: var(--cinza-claro);
-    color: var(--cinza-escuro);
-}
+      /* Seções */
+      #home {
+          background: url('https://unhadecoradasimples.com.br/wp-content/uploads/2024/09/unhas-francesinhas-2024-novas-ideias-1024x579.png') no-repeat center center fixed;
+          background-size: cover;
+          color: rgb(0, 0, 0);
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+      }
 
-.navbar {
-    background-color: var(--rosa-claro);
-}
+      #home h1 {
+          font-size: 48px;
+          font-weight: bold;
+          text-transform: uppercase;
+      }
 
+      #home .btn {
+          background-color: #FF6EB1;
+          color: white;
+          padding: 15px 30px;
+          font-size: 18px;
+          border-radius: 30px;
+          text-transform: uppercase;
+      }
 
-.navbar-brand img {
-            max-width: 150px;
+      #home .btn:hover {
+          background-color: #FF1D5C;
+      }
+
+      /* Serviços */
+      #services {
+          padding: 60px 0;
+          background-color: #fff;
+      }
+
+      #services h2 {
+          font-size: 36px;
+          color: #333;
+          margin-bottom: 30px;
+      }
+
+      .service-box {
+          text-align: center;
+          padding: 30px;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          margin-bottom: 30px;
+          background-color: #f9f9f9;
+      }
+
+      .service-box i {
+          font-size: 40px;
+          color: #FF6EB1;
+          margin-bottom: 20px;
+      }
+
+      .service-box h4 {
+          font-size: 24px;
+          color: #333;
+          margin-bottom: 10px;
+      }
+
+      .service-box p {
+          font-size: 16px;
+          color: #777;
+      }
+
+      /* Portfólio */
+      #portfolio {
+          padding: 60px 0;
+          background-color: #f4f4f4;
+      }
+
+      #portfolio h2 {
+          text-align: center;
+          font-size: 36px;
+          margin-bottom: 40px;
+      }
+
+      /* Galeria de imagens com Flexbox */
+      .gallery {
+          display: flex;
+          flex-wrap: wrap; /* Permite que as imagens quebrem de linha se não couberem */
+          gap: 15px; /* Espaço entre as imagens */
+          justify-content: center; /* Centraliza as imagens */
+      }
+
+      .gallery img {
+          width: 100%;     /* A imagem ocupa toda a largura do contêiner da coluna */
+          height: 250px;   /* Altura fixa para todas as imagens */
+          object-fit: cover;  /* As imagens preenchem o espaço sem distorcer */
+          border-radius: 10px; /* Bordas arredondadas */
+          display: block; /* Remove espaço extra abaixo da imagem */
+          max-width: 300px; /* Define uma largura máxima para as imagens */
+      }
+
+      /* Responsividade para telas menores */
+      @media (max-width: 767px) {
+        .gallery img {
+            height: 200px;  /* Diminui a altura das imagens em telas menores */
         }
+      }
 
-.navbar-nav .nav-link {
-    color: var(--branco) !important;
-}
+      /* Contato */
+      #contact {
+          background-color: #FF6EB1;
+          color: rgb(255, 255, 255);
+          padding: 60px 0;
+          text-align: center;
+      }
 
-.navbar-nav .nav-link:hover {
-    color: var(--rosa-escuro) !important;
-}
+      #contact h2 {
+          font-size: 36px;
+          margin-bottom: 20px;
+      }
 
-#home {
-    background-color: var(--cinza-ultra-claro);
-    color: var(--branco);
-}
+      #contact p {
+          font-size: 18px;
+          margin-bottom: 30px;
+      }
 
-#home .btn {
-    background-color: var(--rosa-claro);
-    color: var(--branco);
-}
-
-#home .btn:hover {
-    background-color: var(--rosa-escuro);
-}
-
-#services {
-    background-color: var(--branco);
-}
-
-#services h2 {
-    color: var(--cinza-escuro);
-}
-
-.service-box {
-    background-color: var(--cinza-muito-claro);
-    border: 1px solid var(--cinza-ultra-claro);
-}
-
-#portfolio {
-    background-color: var(--cinza-ultra-claro);
-}
-
-#team {
-    background-color: var(--branco);
-}
-
-#contact {
-    background-color: var(--rosa-claro);
-    color: var(--branco);
-}
-
-footer {
-    background-color: var(--cinza-escuro);
-    color: var(--branco);
-}
-
-
+      /* Footer */
+      footer {
+          background-color: #333;
+          color: white;
+          padding: 20px;
+          text-align: center;
+      }
     </style>
-  </head>   
+  </head>
 
   <body>
 
@@ -125,7 +188,7 @@ footer {
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
           <a class="navbar-brand" href="#">
-              <img src="https://www.designi.com.br/images/preview/10424780.jpg" alt="Logo Salão de Manicure">
+              <img src="https://www.designi.com.br/images/preview/10424780.jpg" alt="Logo">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -133,14 +196,18 @@ footer {
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                      <a class="nav-link" href="index.html" style="font-size: 20px;">Home</a>
+                      <a class="nav-link" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="galeria.html" style="font-size: 20px;">Galeria</a>
+                      <a class="nav-link" href="galeria.html">Galeria</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="contato.html">Contato</a>
+                  </li>
               </ul>
           </div>
       </div>
-  </nav>
+    </nav>
 
     <header>
       <div class="navbar navbar-dark bg-dark shadow-sm">
@@ -153,11 +220,9 @@ footer {
     </header>
 
     <main role="main">
-
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Exemplos de Unhas</h1>
-        
         </div>
       </section>
 
@@ -165,65 +230,26 @@ footer {
         <div class="container">
           <div class="row">
 
-            <!-- Imagem 1 -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="https://www.unhasesmaltes.com.br/_next/image?url=https%3A%2F%2Fmelhoresdicas.s3.amazonaws.com%2Fstyles%2F1200x630%2Fs3%2F2024-06%2Funhas-em-gel-delicadas-guia-completo-para-uma-manicure-elegante-e-duradoura.jpg.webp%3Fitok%3Dag7pxCfk&w=3840&q=75" alt="Unhas Decoradas">
-                <div class="card-body">
-                
+            <!-- Portfólio -->
+            <section id="portfolio">
+              <div class="container">
+                <h2>Meus Feitos</h2>
+                <div class="gallery">
+                  <!-- Imagem 1 -->
+                  <img src="https://www.unhasesmaltes.com.br/_next/image?url=https%3A%2F%2Fmelhoresdicas.s3.amazonaws.com%2Fstyles%2F1200x630%2Fs3%2F2024-06%2Funhas-em-gel-delicadas-guia-completo-para-uma-manicure-elegante-e-duradoura.jpg.webp%3Fitok%3Dag7pxCfk&w=3840&q=75" alt="Unhas Decoradas">
+                  <!-- Imagem 2 -->
+                  <img src="https://areademulher.r7.com/wp-content/uploads/2018/12/30-imagens-de-unhas-para-o-reveillon-para-te-inspirar-31-1200x720.jpg" alt="Arte nas Unhas">
+                  <!-- Imagem 3 -->
+                  <img src="https://selecoes.ig.com.br/media/_versions/2023/11/unhas-decoradas_0c3htu0f_widelg.jpg" alt="Manicure Profissional">
+                  <!-- Imagem 4 -->
+                  <img src="https://www.unhasesmaltes.com.br/_next/image?url=https%3A%2F%2Fmelhoresdicas.s3.amazonaws.com%2Fstyles%2F636x636%2Fs3%2F2024-06%2Ffibras-unha-revolucionando-o-cuidado-e-beleza-das-unhas-quadrada.jpg.webp%3Fitok%3DMlnXj2ze&w=1920&q=75" alt="Unhas Decoradas">
+                  <!-- Imagem 5 -->
+                  <img src="https://cdn.awsli.com.br/2610/2610009/produto/220339154/adesivos-de-unha-pqy9oo11ur.jpg" alt="Arte nas Unhas">
+                  <!-- Imagem 6 -->
+                  <img src="https://s2-redeglobo.glbimg.com/LywmUDcOxnnIEQcHN2BJKyCAQRU=/0x0:1080x608/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b58693ed41d04a39826739159bf600a0/internal_photos/bs/2023/L/B/gUugISQaWNhBRmXHoJNQ/capa-materias-site-2023-10-17t115333.646.png" alt="Manicure Profissional">
                 </div>
               </div>
-            </div>
-
-            <!-- Imagem 2 -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="https://areademulher.r7.com/wp-content/uploads/2018/12/30-imagens-de-unhas-para-o-reveillon-para-te-inspirar-31-1200x720.jpg" alt="Arte nas Unhas">
-                <div class="card-body">
-                  
-                </div>
-              </div>
-            </div>
-
-            <!-- Imagem 3 -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="https://selecoes.ig.com.br/media/_versions/2023/11/unhas-decoradas_0c3htu0f_widelg.jpg" alt="Manicure Profissional">
-                <div class="card-body">
-                 
-                </div>
-              </div>
-            </div>
-
-            <!-- Imagem 4 -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="https://www.unhasesmaltes.com.br/_next/image?url=https%3A%2F%2Fmelhoresdicas.s3.amazonaws.com%2Fstyles%2F636x636%2Fs3%2F2024-06%2Ffibras-unha-revolucionando-o-cuidado-e-beleza-das-unhas-quadrada.jpg.webp%3Fitok%3DMlnXj2ze&w=1920&q=75" alt="Unhas Decoradas">
-                <div class="card-body">
-                  
-                </div>
-              </div>
-            </div>
-
-            <!-- Imagem 5 -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="https://cdn.awsli.com.br/2610/2610009/produto/220339154/adesivos-de-unha-pqy9oo11ur.jpg" alt="Arte nas Unhas">
-                <div class="card-body">
-                 
-                </div>
-              </div>
-            </div>
-
-            <!-- Imagem 6 -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="https://s2-redeglobo.glbimg.com/LywmUDcOxnnIEQcHN2BJKyCAQRU=/0x0:1080x608/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b58693ed41d04a39826739159bf600a0/internal_photos/bs/2023/L/B/gUugISQaWNhBRmXHoJNQ/capa-materias-site-2023-10-17t115333.646.png" alt="Manicure Profissional">
-                <div class="card-body">
-                 
-                </div>
-              </div>
-            </div>
+            </section>
 
           </div>
         </div>
@@ -234,9 +260,8 @@ footer {
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
-          
         </p>
-        <p>Galeria de Manicure &copy; 2024. Todos os direitos reservados.</p>
+        <p style="color: rgb(255, 255, 255);">Galeria de Manicure &copy; 2024. Todos os direitos reservados.</p>
       </div>
     </footer>
 
@@ -244,5 +269,6 @@ footer {
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
   </body>
 </html>
