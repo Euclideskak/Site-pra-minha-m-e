@@ -34,8 +34,11 @@
         }
 
         .navbar-brand img {
-            max-width: 150px;
-        }
+    width: 150px;  /* Largura definida */
+    height: 150px; /* Altura igual para manter a proporção */
+    border-radius: 50%; /* Forma esférica */
+}
+
 
         .navbar-nav .nav-link {
             color: white !important;
@@ -228,22 +231,26 @@
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+       <!-- Navbar -->
+       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="https://www.designi.com.br/images/preview/10424780.jpg" alt="Logo Salão de Manicure">
+                <img src="https://www.designi.com.br/images/preview/10424780.jpg" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto"> <!-- Alinha os itens à direita -->
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html" style="font-size: 20px;">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="galeria.html" style="font-size: 20px;">Galeria</a>
+                        <a class="nav-link" href="galeria.html">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -307,10 +314,10 @@
 </div>
     <!-- Contato -->
     <div id="contact">
-        <h2>Fale comigo</h2>
-        <p>Entre em contato comigo para agendar seu horário e obter mais informações sobre o meu serviços.</p>
-        <p><strong>Endereço:</strong> Rua das Flores, 123 - Centro, Cidade, Estado</p>
-        <p><strong>Email:</strong> alinecrociare@gmail.com</p>
+       <p> Dediquei-me com muito empenho e atenção aos detalhes,
+        <br> oferecendo um trabalho impecável como manicure. Cada cliente 
+         foi tratada com cuidado e carinho, garantindo unhas bem 
+         <br> feitas e um resultado final que superou as expectativas. </p>
     </div>
 
     <!-- Footer -->
