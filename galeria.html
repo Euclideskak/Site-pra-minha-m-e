@@ -145,6 +145,7 @@
           border-radius: 10px; /* Bordas arredondadas */
           display: block; /* Remove espaço extra abaixo da imagem */
           max-width: 300px; /* Define uma largura máxima para as imagens */
+          cursor: pointer; /* Aparece como um cursor de "mãozinha" ao passar o mouse */
       }
 
       /* Responsividade para telas menores */
@@ -258,11 +259,27 @@
 
     </main>
 
+    <!-- Modal para visualizar a imagem ampliada -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img id="modalImage" src="" class="img-fluid" alt="Imagem ampliada">
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
         </p>
-        <p style="color: rgb(255, 255, 255);">© 2024 Galeria de Manicure | Todos os direitos reservados.</p>
+        <p style="color: rgb(255, 255, 255);">© 2024 Galeria de Manicure &copy; 2024. Todos os direitos reservados.</p>
       </div>
     </footer>
 
@@ -271,5 +288,12 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <!-- Script para abrir a imagem no modal -->
+    <script>
+      function openModal(image) {
+        var modalImage = document.getElementById('modalImage');
+        modalImage.src = image.src;
+      }
+    </script>
   </body>
 </html>
