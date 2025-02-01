@@ -29,12 +29,6 @@
         /* Navbar */
         .navbar {
             background-color: #FF6EB1;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            top: 0;
-            left: 0;
-            padding: 10px 0;
         }
 
         .navbar-brand img {
@@ -43,9 +37,6 @@
     border-radius: 50%; /* Forma esférica */
 }
 
-        .navbar-nav {
-            margin-left: auto; /* Alinha os itens à direita */
-        }
 
         .navbar-nav .nav-link {
             color: white !important;
@@ -96,7 +87,7 @@
             background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 200px;
+            margin-top: -55px;
         }
 
         .contact-container h1 {
@@ -146,32 +137,18 @@
 </head>
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="https://www.designi.com.br/images/preview/10424780.jpg" alt="Logo">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto"> <!-- Alinha os itens à direita -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="galeria.html">Galeria</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Contato.html">Contato</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="navbar-brand"> 
+            <img src="https://www.designi.com.br/images/preview/10424780.jpg" alt="logo">
+              <div class="navbar-nav d-flex">
+                <a class="nav-item nav-link active" href="index.html">Home</a>
+                <a class="nav-item nav-link" href="Contato.html">Contato</a>
+              </div>
+            </nav>
+          </div>
         </div>
-    </nav>
-
+    </div>
+    
     <!-- Contêiner de Contato -->
     <div class="contact-container" ;>
         <h1>Entre em contato</h1>
@@ -188,7 +165,7 @@
 </div>
 
     <footer>
-        <p>&copy; 2024 Contato de Manicure | Todos os direitos reservados</p>
+        <p>&copy; © 2024 Salão de Manicure | Todos os direitos reservados</p>
     </footer>
 
     <!-- Scripts -->
