@@ -7,6 +7,9 @@
     <meta name="author" content="Seu Nome">
     <title>Salão de Manicure - Beleza nas Mãos</title>
 
+    <!--animações-->
+    <link href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
@@ -34,11 +37,10 @@
         }
 
         .navbar-brand img {
-    width: 150px;  /* Largura definida */
-    height: 150px; /* Altura igual para manter a proporção */
-    border-radius: 50%; /* Forma esférica */
-}
-
+            width: 150px;  /* Largura definida */
+            height: 150px; /* Altura igual para manter a proporção */
+            border-radius: 50%; /* Forma esférica */
+        }
 
         .navbar-nav .nav-link {
             color: white !important;
@@ -67,6 +69,29 @@
             text-transform: uppercase;
         }
 
+        /* A animação que vai mover o elemento de fora para dentro da tela */
+        @keyframes leRollFromLeft {
+            0% { 
+                transform: translateX(-100%);  /* Começa à esquerda fora da tela */
+                opacity: 0;  /* Começa invisível */
+            }
+            100% { 
+                transform: translateX(0);  /* Move até a posição original */
+                opacity: 1;  /* Torna visível */
+            }
+        }
+
+        /* Aqui é onde a animação é aplicada */
+        .cssanimation.leRollFromLeft {
+            animation: leRollFromLeft 1s ease-in-out; /* Aplica a animação definida acima */
+        }
+
+        /* Estilo do elemento com id 'animacao' */
+        #animacao {
+            text-align: center;  /* Centraliza o texto */
+            margin-top: 50px;     /* Adiciona um espaçamento superior */
+        }
+
         #home .btn {
             background-color: #FF6EB1;
             color: white;
@@ -80,10 +105,15 @@
             background-color: #FF1D5C;
         }
 
+
         /* Serviços */
         #services {
             padding: 60px 0;
             background-color: #fff;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            
         }
 
         #services h2 {
@@ -92,6 +122,7 @@
             margin-bottom: 30px;
         }
 
+        
         .service-box {
             text-align: center;
             padding: 30px;
@@ -122,6 +153,9 @@
         #portfolio {
             padding: 60px 0;
             background-color: #f4f4f4;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
         }
 
         #portfolio .gallery img {
@@ -135,10 +169,11 @@
         #portfolio .gallery img:hover {
             transform: scale(1.05);
         }
+
         /*A cor dos botoes*/
         .btn-pink {
-    background-color: rgb(248, 75, 196); /* Cor de fundo do botão */
-    color: white; /* Cor do texto */
+            background-color: rgb(248, 75, 196); /* Cor de fundo do botão */
+            color: white; /* Cor do texto */
         }
 
         /* Equipe */
@@ -177,42 +212,6 @@
             text-align: center;
         }
 
-        /* Estilo para o Portfólio */
-#portfolio {
-    padding: 60px 0;
-    background-color: #f4f4f4;
-}
-
-#portfolio h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
-/* Galeria de imagens */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px; /* Espaço entre as imagens */
-    justify-content: center;
-}
-
-.gallery img {
-    width: 100%;     /* A imagem ocupa toda a largura do contêiner da coluna */
-    height: 250px;   /* Altura fixa para todas as imagens */
-    object-fit: cover;  /* As imagens preenchem o espaço sem distorcer */
-    border-radius: 10px; /* Bordas arredondadas */
-    display: block; /* Remove espaço extra abaixo da imagem */
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 767px) {
-    .gallery img {
-        height: 200px;  /* Diminui a altura das imagens em telas menores */
-    }
-}
-
-
         #contact h2 {
             font-size: 36px;
             margin-bottom: 20px;
@@ -235,40 +234,40 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="navbar-brand"> 
-        <img src="https://www.designi.com.br/images/preview/10424780.jpg" alt="logo">
-          <div class="navbar-nav d-flex">
+        <div class="navbar-brand"> 
+            <img src="https://www.designi.com.br/images/preview/10424780.jpg" alt="logo">
+        </div>
+        <div class="navbar-nav d-flex">
             <a class="nav-item nav-link active" href="index.html">Home</a>
             <a class="nav-item nav-link" href="Contato.html">Contato</a>
-          </div>
-        </nav>
-      </div>
-    </div>
-</div>
+        </div>
+    </nav>
 
     <!-- Home -->
     <div id="home">
-        <div>
-            <h1>Cuide das Suas Mãos</h1>
-            <p>Ofereço serviços de manicure e pedicure com muito carinho, para que você se sinta ainda mais cuidada e bem consigo mesma.</p>
-            <a href="#services" class="btn">Descubra Nossos Serviços</a>
+        <div id="animacao">
+            <div class="cssanimation leRollFromLeft">
+                <h1>Cuide das Suas Mãos</h1>
+                <p>Ofereço serviços de manicure e pedicure com muito carinho, para que você se sinta ainda mais cuidada e bem consigo mesma.</p>
+                <a href="#services" class="btn">Descubra Nossos Serviços</a>
+            </div>
         </div>
     </div>
-
-    <!-- Serviços -->
+    
+<!-- serviçios -->
     <div id="services">
         <div class="container">
-            <h2>Nossos Serviços</h2>
-            <div class="row">
-                <div class="col-md-4">
+            <div class="cssanimation leBlurInLeft sequence"> Nossos Serviços </div>
+            <div class="row justify-content-center"> <!-- Adicionado 'justify-content-center' para centralizar -->
+                <div class="col-md-4 d-flex justify-content-center"> <!-- Adicionado 'd-flex' e 'justify-content-center' -->
                     <div class="service-box">
                         <i class="ion-ios-heart"></i>
                         <h4>Manicure</h4>
                         <p>Cuidados completos para suas unhas, com acabamento perfeito.</p>
-                        <a href="Unhas-das-mãos.html" class="btn btn-pink">saiba Mais</a>
+                        <a href="Unhas-das-mãos.html" class="btn btn-pink">Saiba Mais</a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 d-flex justify-content-center"> <!-- Mesma centralização aqui -->
                     <div class="service-box">
                         <i class="ion-ios-color-wand"></i>
                         <h4>Pedicure</h4>
@@ -276,42 +275,33 @@
                         <a href="Unhas-dos-pes.html" class="btn btn-pink">Saiba Mais</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Portfólio -->
+    <div id="portfolio">
+        <div class="container">
+            <div <div class="cssanimation leBlurInLeft sequence"> Portfólio de Trabalhos </div>
+            <br>
+            <div class="row gallery">
                 <div class="col-md-4">
-                    <div class="service-box">
-                        <i class="ion-ios-palette"></i>
-                        <h4>Arte nas Unhas</h4>
-                        <p>Decorações criativas para personalizar suas unhas.</p>
-                        <a href="Unhas-desenhos.html" class="btn btn-pink">Saiba Mais</a> <!-- Botão adicionado -->
-                    </div>
+                    <img src="https://i.pinimg.com/originals/ff/2f/b9/ff2fb97549faa130ccad0967e24975e2.jpg" alt="Unhas Decoradas">
                 </div>
+                <div class="col-md-4">
+                    <img src="https://i.pinimg.com/736x/73/66/f0/7366f0ef2af22dbddd7e4b38c9319503.jpg" alt="Arte nas Unhas">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://unhadecoradasimples.com.br/wp-content/uploads/2024/06/unhas-decoradas-63-1024x1024.jpg" alt="Manicure Profissional">
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Portfólio -->
-<div id="portfolio">
-    <div class="container">
-        <h2>Portfólio de Trabalhos</h2>
-        <div class="row gallery">
-            <div class="col-md-4">
-                <img src="https://i.pinimg.com/originals/ff/2f/b9/ff2fb97549faa130ccad0967e24975e2.jpg" alt="Unhas Decoradas">
-            </div>
-            <div class="col-md-4">
-                <img src="https://i.pinimg.com/736x/73/66/f0/7366f0ef2af22dbddd7e4b38c9319503.jpg" alt="Arte nas Unhas">
-            </div>
-            <div class="col-md-4">
-                <img src="https://unhadecoradasimples.com.br/wp-content/uploads/2024/06/unhas-decoradas-63-1024x1024.jpg" alt="Manicure Profissional">
-            </div>
-        </div>
-    </div>
-</div>
     <!-- Contato -->
     <div id="contact">
-       <p> Dediquei-me com muito empenho e atenção aos detalhes,
-        <br> oferecendo um trabalho impecável como manicure. Cada cliente 
-         foi tratada com cuidado e carinho, garantindo unhas bem 
-         <br> feitas e um resultado final que superou as expectativas. </p>
+        <p> Dediquei-me com muito empenho e atenção aos detalhes, oferecendo um trabalho impecável como manicure. Cada cliente foi tratada com cuidado e carinho, garantindo unhas bem feitas e um resultado final que superou as expectativas.</p>
     </div>
 
     <!-- Footer -->
@@ -320,6 +310,9 @@
     </footer>
 
     <!-- Scripts -->
+     <!--script de animção-->
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script>
+     <!--o de cima-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
