@@ -134,12 +134,19 @@
           
       }
 
+      .bordascolor{
+        background-color: rgba(245, 54, 181, 0.945);
+      }
+
       /* Galeria de imagens com Flexbox */
       .gallery {
           display: flex;
           flex-wrap: wrap; /* Permite que as imagens quebrem de linha se não couberem */
           gap: 15px; /* Espaço entre as imagens */
           justify-content: center; /* Centraliza as imagens */
+          padding: 20px;
+          border-radius: 100px;
+          background-color: pink;
       }
 
       .gallery img {
@@ -150,6 +157,7 @@
           display: block; /* Remove espaço extra abaixo da imagem */
           max-width: 300px; /* Define uma largura máxima para as imagens */
           cursor: pointer; /* Aparece como um cursor de "mãozinha" ao passar o mouse */
+          border-radius:  60px;
       }
 
       /* Responsividade para telas menores */
@@ -194,7 +202,7 @@
             <img src="https://www.designi.com.br/images/preview/10424780.jpg" alt="logo">
               <div class="navbar-nav d-flex">
                 <a class="nav-item nav-link active" href="index.html">Home</a>
-                <a class="nav-item nav-link" href="Contato.html">Contato</a>
+                <a class="nav-item nav-link" href="contato.html">Contato</a>
               </div>
             </nav>
           </div>
@@ -202,10 +210,10 @@
     </div>
 
     <header>
-      <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="bordascolor">
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
-            <strong>Unhas das Mãos</strong>
+            <strong style="color: #ffffff;">Unhas das Mãos</strong>
           </a>
         </div>
       </div>
@@ -225,19 +233,19 @@
             <!-- Portfólio -->
             <section id="portfolio">
               <div class="container">
-                <div class="cssanimation hu__hu__" style="font-size: 40px; height: 200px;"> Meus Feitos </div> 
-                <h3 style="text-align: center; background-color: #FF6EB1; font-weight: bold;">Voce pode dar um clique na imagem para ver melhor. </h3>
+               <div class="cssanimation hu__hu__" style="font-size: 40px; height: 200px;"> Meus Feitos </div> 
+               
                 <div class="gallery">
                   <!-- Imagem 1 -->
-                  <img src="img/Unha da mão/mão0.jpeg" alt="Imagem 1" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
+                  <img src="img/unha-da-mao/mao0.jpeg" alt="Imagem 1" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
                   <!-- Imagem 2 -->
-                  <img src="img/Unha da mão/mão1.jpeg" alt="Imagem 2" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
+                  <img src="img/unha-da-mao/mao1.jpeg" alt="Imagem 2" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
                   <!-- Imagem 3 -->
-                  <img src="img/Unha da mão/mão2.jpeg" alt="Imagem 3" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
+                  <img src="img/unha-da-mao/mao2.jpeg" alt="Imagem 3" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
                   <!-- Imagem 4 -->
-                  <img src="img/Unha da mão/mão3.jpeg" alt="Imagem 4" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
+                  <img src="img/unha-da-mao/mao3.jpeg" alt="Imagem 4" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
                   <!-- Imagem 5 -->
-                  <img src="img/Unha da mão/mão4.jpeg" alt="Imagem 5" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
+                  <img src="img/unha-da-mao/mao4.jpeg" alt="Imagem 5" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
                   <!-- Imagem 6 -->
                   <img src="#" alt="Imagem 6" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
                 </div>
