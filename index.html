@@ -36,11 +36,23 @@
             background-color: #FF6EB1;
         }
 
-        .navbar-brand img {
-            width: 150px;  /* Largura definida */
-            height: 150px; /* Altura igual para manter a proporção */
-            border-radius: 50%; /* Forma esférica */
-        }
+        .navbar-brand {
+    overflow: hidden; /* Garante que nada fora do contêiner apareça */
+    width: 150px; /* Define o tamanho do contêiner */
+    height: 150px; /* Deve ser igual à largura */
+    border-radius: 50%; /* Torna o contêiner arredondado */
+}
+
+.navbar-brand img {
+    width: 100%; /* Faz a imagem ocupar todo o espaço do contêiner */
+    height: 100%;
+    border-radius: 50%; /* Garante que a imagem também fique redonda */
+    object-fit: cover; /* Mantém a proporção sem distorcer */
+    transform: scale(1.5); /* Aplica zoom na imagem */
+}
+
+
+
 
         .navbar-nav .nav-link {
             color: white !important;
@@ -235,11 +247,11 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="navbar-brand"> 
-            <img src="https://www.designi.com.br/images/preview/10424780.jpg" alt="logo">
+            <img src="img/logotipo/logotipo.png"logo">
         </div>
         <div class="navbar-nav d-flex">
             <a class="nav-item nav-link active" href="index.html">Home</a>
-            <a class="nav-item nav-link" href="Contato.html">Contato</a>
+            <a class="nav-item nav-link" href="contato.html">Contato</a>
         </div>
     </nav>
 
@@ -264,7 +276,7 @@
                         <i class="ion-ios-heart"></i>
                         <h4>Manicure</h4>
                         <p>Cuidados completos para suas unhas, com acabamento perfeito.</p>
-                        <a href="Unhas-das-mãos.html" class="btn btn-pink">Saiba Mais</a>
+                        <a href="Unhas-das-maos.html" class="btn btn-pink">Saiba Mais</a>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex justify-content-center"> <!-- Mesma centralização aqui -->
