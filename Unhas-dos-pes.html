@@ -132,22 +132,30 @@
           margin-bottom: 40px;
       }
 
+      .bordascolor{
+        background-color: rgb(255, 48, 186);
+      }
+
       /* Galeria de imagens com Flexbox */
 .gallery {
-    display: flex;
-    flex-wrap: wrap; /* Permite que as imagens quebrem de linha se não couberem */
-    gap: 15px; /* Espaço entre as imagens */
-    justify-content: center; /* Centraliza as imagens */
-    align-items: center; /* Alinha as imagens verticalmente */
+  display: flex;
+          flex-wrap: wrap; /* Permite que as imagens quebrem de linha se não couberem */
+          gap: 15px; /* Espaço entre as imagens */
+          justify-content: center; /* Centraliza as imagens */
+          padding: 20px;
+          border-radius: 100px;
+          background-color: pink;
 }
 
 .gallery img {
-    width: 250px;  /* Define uma largura fixa */
-    height: 250px; /* Define uma altura fixa para criar um quadrado */
-    object-fit: cover; /* As imagens preenchem o espaço sem distorcer */
-    border-radius: 10px; /* Bordas arredondadas */
-    display: block; /* Remove espaço extra abaixo da imagem */
-    cursor: pointer; /* Aparece como um cursor de "mãozinha" ao passar o mouse */
+  width: 100%;     /* A imagem ocupa toda a largura do contêiner da coluna */
+          height: 250px;   /* Altura fixa para todas as imagens */
+          object-fit: cover;  /* As imagens preenchem o espaço sem distorcer */
+          border-radius: 10px; /* Bordas arredondadas */
+          display: block; /* Remove espaço extra abaixo da imagem */
+          max-width: 300px; /* Define uma largura máxima para as imagens */
+          cursor: pointer; /* Aparece como um cursor de "mãozinha" ao passar o mouse */
+          border-radius:  60px;
 }
 
 /* Responsividade para telas menores */
@@ -201,7 +209,7 @@
           <img src="https://www.designi.com.br/images/preview/10424780.jpg" alt="logo">
             <div class="navbar-nav d-flex">
               <a class="nav-item nav-link active" href="index.html">Home</a>
-              <a class="nav-item nav-link" href="Contato.html">Contato</a>
+              <a class="nav-item nav-link" href="contato.html">Contato</a>
             </div>
           </nav>
         </div>
@@ -209,10 +217,10 @@
   </div>
 
     <header>
-      <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="bordascolor">
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
-            <strong>Galeria de Manicure</strong>
+            <strong style="color: #ffffff;">Unhas dos Pes</strong>
           </a>
         </div>
       </div>
@@ -221,7 +229,8 @@
     <main role="main">
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Unhas dos Pes</h1>
+          <div class="cssanimation hu__hu__" style="font-size: 40px;">  Unhas dos Pes </div>
+
         </div>
       </section>
 
@@ -232,15 +241,15 @@
             <!-- Portfólio -->
             <section id="portfolio">
               <div class="container">
-                <h2>Meus Feitos</h2>
-                <h3 style="text-align: center; background-color: #FF6EB1; font-weight: bold;">Voce pode dar um clique na imagem para ver melhor. </h3>
+                <div class="cssanimation hu__hu__" style="font-size: 40px; height: 200px; text-align: center; "> Meus Feitos </div>
+
                 <div class="gallery">
                   <!-- Imagem 1 -->
-                  <img src="img/Unha do pe/pe0.jpeg" alt="Imagem 1" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
+                  <img src="img/unha-do-pe/pe0.jpeg" alt="Imagem 1" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
                   <!-- Imagem 2 -->
-                  <img src="img/Unha do pe/pe1.jpeg" alt="Imagem 2" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
+                  <img src="img/unha-do-pe/pe1.jpeg" alt="Imagem 2" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
                   <!-- Imagem 3 -->
-                  <img src="img/Unha do pe/pe2.jpeg" alt="Imagem 3" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
+                  <img src="img/unha-do-pe/pe2.jpeg" alt="Imagem 3" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
                   <!-- Imagem 4 -->
                   <img src="#" alt="Imagem 4" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
                   <!-- Imagem 5 -->
