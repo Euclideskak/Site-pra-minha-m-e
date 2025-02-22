@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Galeria de Manicure</title>
+
+    <link href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Ícones do Ionicons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.10-0/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Estilos customizados para este template -->
+    <style>
+      /* Reset de estilos */
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Arial', sans-serif;
+          color: #333;
+          line-height: 1.6;
+          background-color: #f8f8f8;
+      }
+
+     /* Navbar */
+     .navbar {
+          background-color: #FF6EB1;
+      }
+
+      .navbar-brand img {
+          width: 150px;  /* Largura definida */
+          height: 150px; /* Altura igual para manter a proporção */
+          border-radius: 50%; /* Forma esférica */
+      }
+
+      .navbar-nav .nav-link {
+          color: white !important;
+          font-size: 18px;
+      }
+
+      .navbar-nav .nav-link:hover {
+          color: #FF1D5C !important;
+      }
+
+      /* Seções */
+      #home {
+          background: url('https://unhadecoradasimples.com.br/wp-content/uploads/2024/09/unhas-francesinhas-2024-novas-ideias-1024x579.png') no-repeat center center fixed;
+          background-size: cover;
+          color: rgb(0, 0, 0);
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+      }
+
+      #home h1 {
+          font-size: 48px;
+          font-weight: bold;
+          text-transform: uppercase;
+      }
+
+      #home .btn {
+          background-color: #FF6EB1;
+          color: white;
+          padding: 15px 30px;
+          font-size: 18px;
+          border-radius: 30px;
+          text-transform: uppercase;
+      }
+
+      #home .btn:hover {
+          background-color: #FF1D5C;
+      }
+
+      /* Serviços */
+      #services {
+          padding: 60px 0;
+          background-color: #fff;
+      }
+
+      #services h2 {
+          font-size: 36px;
+          color: #333;
+          margin-bottom: 30px;
+      }
+
+      .service-box {
+          text-align: center;
+          padding: 30px;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          margin-bottom: 30px;
+          background-color: #f9f9f9;
+      }
+
+      .service-box i {
+          font-size: 40px;
+          color: #FF6EB1;
+          margin-bottom: 20px;
+      }
+
+      .service-box h4 {
+          font-size: 24px;
+          color: #333;
+          margin-bottom: 10px;
+      }
+
+      .service-box p {
+          font-size: 16px;
+          color: #777;
+      }
+
+      /* Portfólio */
+      #portfolio {
+          padding: 60px 0;
+          background-color: #f4f4f4;
+      }
+
+      #portfolio h2 {
+          text-align: center;
+          font-size: 36px;
+          margin-bottom: 40px;
+      }
+
+      .bordascolor{
+        background-color: rgb(255, 48, 186);
+      }
+
+      /* Galeria de imagens com Flexbox */
+.gallery {
+  display: flex;
+          flex-wrap: wrap; /* Permite que as imagens quebrem de linha se não couberem */
+          gap: 15px; /* Espaço entre as imagens */
+          justify-content: center; /* Centraliza as imagens */
+          padding: 20px;
+          border-radius: 100px;
+          background-color: pink;
+}
+
+.gallery img {
+  width: 100%;     /* A imagem ocupa toda a largura do contêiner da coluna */
+          height: 250px;   /* Altura fixa para todas as imagens */
+          object-fit: cover;  /* As imagens preenchem o espaço sem distorcer */
+          border-radius: 10px; /* Bordas arredondadas */
+          display: block; /* Remove espaço extra abaixo da imagem */
+          max-width: 300px; /* Define uma largura máxima para as imagens */
+          cursor: pointer; /* Aparece como um cursor de "mãozinha" ao passar o mouse */
+          border-radius:  60px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 767px) {
+    .gallery img {
+        width: 200px;  /* Reduz a largura e altura das imagens em telas menores */
+        height: 200px; 
+    }
+}
+
+
+      /* Responsividade para telas menores */
+      @media (max-width: 767px) {
+        .gallery img {
+            height: 200px;  /* Diminui a altura das imagens em telas menores */
+        }
+      }
+
+      /* Contato */
+      #contact {
+          background-color: #FF6EB1;
+          color: rgb(255, 255, 255);
+          padding: 60px 0;
+          text-align: center;
+      }
+
+      #contact h2 {
+          font-size: 36px;
+          margin-bottom: 20px;
+      }
+
+      #contact p {
+          font-size: 18px;
+          margin-bottom: 30px;
+      }
+
+      /* Footer */
+      footer {
+          background-color: #333;
+          color: white;
+          padding: 20px;
+          text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="navbar-brand"> 
+          <img src="img/logotipo/logo tipo.png" alt="logo">
+            <div class="navbar-nav d-flex">
+              <a class="nav-item nav-link active" href="index.html">Home</a>
+              <a class="nav-item nav-link" href="contato.html">Contato</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+  </div>
+
+    <header>
+      <div class="bordascolor">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <strong style="color: #ffffff;">Unhas dos Pes</strong>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+      <section class="jumbotron text-center">
+        <div class="container">
+          <div class="cssanimation hu__hu__" style="font-size: 40px;">  Unhas dos Pes </div>
+
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+
+            <!-- Portfólio -->
+            <section id="portfolio">
+              <div class="container">
+                <div class="cssanimation hu__hu__" style="font-size: 40px; height: 200px; text-align: center; "> Meus Feitos </div>
+
+                <div class="gallery">
+                  <!-- Imagem 1 -->
+                  <img src="img/unha-do-pe/pe0.jpeg" alt="Imagem 1" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
+                  <!-- Imagem 2 -->
+                  <img src="img/unha-do-pe/pe1.jpeg" alt="Imagem 2" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
+                  <!-- Imagem 3 -->
+                  <img src="img/unha-do-pe/pe2.jpeg" alt="Imagem 3" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
+                  <!-- Imagem 4 -->
+                  <img src="#" alt="Imagem 4" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
+                  <!-- Imagem 5 -->
+                  <img src="#" alt="Imagem 5" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
+                  <!-- Imagem 6 -->
+                  <img src="#" alt="Imagem 6" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Modal para visualizar a imagem ampliada -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img id="modalImage" src="" class="img-fluid" alt="Imagem ampliada">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+        </p>
+        <p style="color: rgb(255, 255, 255);">© 2024 Galeria de Manicure &copy; 2024. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts do Bootstrap -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Script para abrir a imagem no modal -->
+    <script>
+      function openModal(image) {
+        var modalImage = document.getElementById('modalImage');
+        modalImage.src = image.src;
+      }
+    </script>
+  </body>
+</html>
