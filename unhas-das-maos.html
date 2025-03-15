@@ -169,6 +169,59 @@
         }
       }
 
+      /* Estilo do Modal */
+#imageModal .modal-dialog {
+    max-width: 50%; /* Controla o tamanho do modal em telas grandes */
+    margin: 30px auto; /* Centraliza o modal */
+}
+
+#imageModal .modal-content {
+    background-color: #f8f9fa; /* Cor de fundo do modal */
+    border-radius: 40px; /* Bordas arredondadas */
+}
+
+#imageModal .modal-header {
+    background-color: #343a40; /* Cor de fundo da cabeceira */
+    color: #fff; /* Cor do texto da cabeceira */
+}
+
+#imageModal .close {
+    color: #fff; /* Cor do botão de fechar */
+    font-size: 1.5em; /* Tamanho da fonte do botão de fechar */
+}
+
+/* Estilo para a imagem dentro do modal */
+#modalImage {
+    border-radius: 20px;
+    display: block; /* Garante que a imagem ocupe toda a largura disponível */
+    margin: 0 auto; /* Centraliza a imagem */
+    width: 100%; /* A imagem vai ocupar 100% da largura disponível no modal */
+    max-height: 90vh; /* Limita a altura máxima da imagem para 90% da altura da tela */
+    object-fit: contain; /* Faz a imagem se ajustar sem perder proporção */
+}
+
+/* Estilo para tornar o modal responsivo */
+@media (max-width: 768px) {
+    #imageModal .modal-dialog {
+        max-width: 90%; /* Reduz o tamanho do modal em telas menores */
+    }
+
+    #modalImage {
+        max-height: 80vh; /* Ajusta a altura da imagem para não ultrapassar a altura da tela */
+    }
+}
+
+/* Para telas pequenas como smartphones (menor que 576px) */
+@media (max-width: 576px) {
+    #imageModal .modal-dialog {
+        max-width: 95%; /* Modal quase 100% da largura em dispositivos muito pequenos */
+    }
+
+    #modalImage {
+        max-height: 80vh; /* Ajusta a altura da imagem para dispositivos pequenos */
+    }
+}
+
       /* Contato */
       #contact {
           background-color: #FF6EB1;
@@ -270,11 +323,13 @@
             </button>
           </div>
           <div class="modal-body">
+            <!-- A imagem ampliada será inserida aqui -->
             <img id="modalImage" src="" class="img-fluid" alt="Imagem ampliada">
           </div>
         </div>
       </div>
     </div>
+
 
     <footer class="text-muted">
       <div class="container">
